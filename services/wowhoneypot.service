@@ -1,0 +1,10 @@
+[Unit]
+Description=WOWHoneypot
+
+[Service]
+ExecStart=/opt/wowhoney/bin/start.sh
+Restart=alwayes
+Type=simple
+
+[Install]
+WantedBy=multi-user.target
