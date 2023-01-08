@@ -2,9 +2,10 @@
 Description=WOWHoneypot
 
 [Service]
+WorkingDirectory=/opt/wowhoney
 ExecStart=/opt/wowhoney/bin/start.sh
-Restart=alwayes
 Type=simple
+RemainAfterExit=yes
 
 [Install]
 WantedBy=multi-user.target
