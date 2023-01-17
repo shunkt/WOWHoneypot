@@ -137,7 +137,7 @@ def before_req(response: Response):
         hostname = "blank:80"
     full_path = request.path
     if request.query_string != b'':
-        full_path += f"?{request.query_string!s}"
+        full_path += "?{}".format(request.query_string.decode("utf-8"))
     requet_line = f"{request.method} {full_path} {request.environ.get('SERVER_PROTOCOL')}"
     request_all = "{}\n{!s}{}".format(
         requet_line,
